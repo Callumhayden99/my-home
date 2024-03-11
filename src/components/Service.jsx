@@ -291,6 +291,36 @@ export default function Service() {
           </div>
         </div>
       </div>
+            {/* Valuation Section */}
+            <div className="bg-gray-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:flex lg:items-center lg:justify-between">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                Luxury Home Valuations
+              </h2>
+              <p className="mt-3 max-w-3xl text-lg text-gray-200">
+                Accurate valuation is key when buying or selling a luxury property. Our experienced appraisers use advanced techniques and market insights to provide precise valuations, ensuring you make informed decisions.
+              </p>
+              <div className="mt-10 sm:flex">
+                <a
+                  href="#"
+                  className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                >
+                  Get a Valuation
+                </a>
+              </div>
+            </div>
+            <div className="mt-10 lg:mt-0 lg:ml-10">
+              <img
+                className="mx-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+                src="https://source.unsplash.com/800x600/?luxury-home-valuation"
+                alt="Luxury Home Valuation"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </>
   );
