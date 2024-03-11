@@ -48,9 +48,11 @@ export default function Header() {
                 <h2>ABOUT US</h2>
               </Link>
               <button className="text-blue-500">Sign In</button>
-              <button className="text-white bg-blue-500 p-2 rounded-xl">
-                Sign Up
-              </button>
+              <Link to="/signup">
+                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                  Sign Up
+                </button>
+              </Link>
             </nav>
           </div>
         )}
@@ -75,18 +77,21 @@ export default function Header() {
             </Link>
             <div className="flex ml-20 gap-5">
               <button className="text-blue-500">Sign In</button>
-              <button className="text-white bg-blue-500 p-2 rounded-xl">
-                Sign Up
-              </button>
+              <Link to="/signup">
+                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                  Sign Up
+                </button>
+              </Link>
             </div>
           </nav>
         </div>
         <Routes>
-          <Route path="/"/>
-          <Route path="/houses"/>
-          <Route path="/service"/>
-          <Route path="/contact"/>
-          <Route path="/about"/>
+          <Route path="/" />
+          <Route path="/houses" />
+          <Route path="/service" />
+          <Route path="/contact" />
+          <Route path="/about" />
+          <Route path="/signup"/>
         </Routes>
       </div>
     </>
