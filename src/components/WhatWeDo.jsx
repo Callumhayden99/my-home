@@ -14,8 +14,8 @@ export default function WhatWeDo() {
             get a property according to your taste.
           </p>
         </div>
-        <div className="flex justify-center gap-5 mx-10">
-          <div className="flex flex-col items-center bg-neutral-500 w-2/12 p-5 hover:bg-white">
+        <div className="flex flex-wrap justify-center gap-5 mx-10">
+          <div className="flex flex-col items-center bg-neutral-500 w-full sm:w-6/12 md:w-3/12 lg:w-2/12 p-5 hover:bg-white">
             <div className="bg-white p-3 rounded-full">
               <BiSolidMessageAltDetail size="2em" />
             </div>
@@ -26,7 +26,7 @@ export default function WhatWeDo() {
               voluptate officia.
             </p>
           </div>
-          <div className="flex flex-col items-center bg-neutral-500 w-2/12 p-5 hover:bg-white">
+          <div className="flex flex-col items-center bg-neutral-500 w-full sm:w-6/12 md:w-3/12 lg:w-2/12 p-5 hover:bg-white">
             <div className="bg-white p-3 rounded-full">
               <IoShieldCheckmarkSharp size="2em" />
             </div>
@@ -37,7 +37,7 @@ export default function WhatWeDo() {
               voluptate officia.
             </p>
           </div>
-          <div className="flex flex-col items-center bg-neutral-500 w-2/12 p-5 hover:bg-white">
+          <div className="flex flex-col items-center bg-neutral-500 w-full sm:w-6/12 md:w-3/12 lg:w-2/12 p-5 hover:bg-white">
             <div className="bg-white p-3 rounded-full">
               <FaMedal size="2em" />
             </div>
@@ -48,7 +48,7 @@ export default function WhatWeDo() {
               voluptate officia.
             </p>
           </div>
-          <div className="flex flex-col items-center bg-neutral-500 w-2/12 p-5 hover:bg-white">
+          <div className="flex flex-col items-center bg-neutral-500 w-full sm:w-6/12 md:w-3/12 lg:w-2/12 p-5 hover:bg-white">
             <div className="bg-white p-3 rounded-full">
               <MdFamilyRestroom size="2em" />
             </div>
@@ -61,7 +61,7 @@ export default function WhatWeDo() {
           </div>
         </div>
       </div>
-      </div>
+    </div>
     </>
   );
 }

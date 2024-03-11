@@ -1,20 +1,60 @@
-import Header from './components/Header'
-import UpperMain from './components/upperMain'
-import WhatWeDo from './components/WhatWeDo'
-import Footer from './components/Footer'
-import './App.css'
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
- 
-
   return (
     <>
-    <Header />
-    <UpperMain />
-    <WhatWeDo />
-    <Footer/>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+            </>
+          }
+        />
+        <Route
+          path="/houses"
+          element={
+            <>
+              <Header />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <>
+              <Header />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Header />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Header />
+              <Footer />
+            </>
+          }
+        />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
