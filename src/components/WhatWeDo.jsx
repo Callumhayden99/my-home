@@ -5,7 +5,8 @@ import { MdFamilyRestroom } from "react-icons/md";
 export default function WhatWeDo() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-20">
+    <div className="what-we-do">
+      <div className="flex flex-col justify-center items-center mt-20 pb-20 pt-20">
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-5">What we do?</h1>
           <p className="text-lg mb-20">
@@ -59,6 +60,7 @@ export default function WhatWeDo() {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
