@@ -1,5 +1,6 @@
 import Home from "./components/Home";
 import Header from "./components/Header";
+import Service from "./components/Service";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -30,6 +31,7 @@ function App() {
           element={
             <>
               <Header />
+              <Service />
               <Footer />
             </>
           }
