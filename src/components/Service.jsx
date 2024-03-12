@@ -1,7 +1,7 @@
 export default function Service() {
   return (
     <>
-      <div className="bg-gray-100 mt-5">
+      <div className="bg-gray-100 mt-10">
         {/* Hero Section */}
         <div
           className="bg-center bg-cover bg-no-repeat"

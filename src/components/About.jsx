@@ -1,7 +1,13 @@
+import owner from "../assets/owner.jpg";
+import female from "../assets/female.jpg";
+import female2 from "../assets/female2.jpg";
+import male from "../assets/male.jpg";
+import male2 from "../assets/male2.jpg";
+import male3 from "../assets/male3.jpg";
 export default function About() {
   return (
     <>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white mt-10">
         {/* Header */}{" "}
         <header className="bg-gray-100 shadow">
           {" "}
@@ -16,12 +22,12 @@ export default function About() {
           <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             {/* Company Overview */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              <h2 className="text-4xl font-bold  text-gray-800">
                 Our Story
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
                 <div>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-gray-600 text-lg lg:text-2xl leading-relaxed mb-10 ">
                     Founded in Manchester, England, our luxury homes company has
                     been helping clients buy, sell, and rent high-end properties
                     for many years. With a passion for exceptional service and a
@@ -29,7 +35,7 @@ export default function About() {
                     established ourselves as a trusted partner for discerning
                     clients seeking the finest homes in the region.
                   </p>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-lg lg:text-2xl leading-relaxed">
                     Our team of seasoned professionals brings decades of
                     combined experience and a wealth of industry knowledge to
                     every transaction. We pride ourselves on our attention to
@@ -38,15 +44,17 @@ export default function About() {
                   </p>
                 </div>
                 <div className="relative">
-                  <img
-                    src="https://via.placeholder.com/800x600"
-                    alt="Company Overview"
-                    className="w-full rounded-lg shadow-lg"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-3xl font-bold bg-gray-800 bg-opacity-50 px-4 py-2 rounded-lg">
-                      Your Trusted Partner
-                    </span>
+                  <div className="w-full md:w-3/4 mx-auto">
+                    <img
+                      src={owner}
+                      alt="Company Overview"
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-white text-xl md:text-2xl font-bold bg-gray-800 bg-opacity-50 px-4 py-2 rounded-lg">
+                        Your Trusted Partner
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -194,34 +202,34 @@ export default function About() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={male}
                     alt="Team Member 1"
                     className="w-32 h-32 rounded-full mx-auto mb-4 transition duration-300 ease-in-out transform hover:scale-110"
                   />
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
-                    John Doe
+                    Callum Hayden
                   </h3>
                   <p className="text-gray-600">Founder & CEO</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={male2}
                     alt="Team Member 2"
                     className="w-32 h-32 rounded-full mx-auto mb-4 transition duration-300 ease-in-out transform hover:scale-110"
                   />
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
-                    Jane Smith
+                    Jack Miller
                   </h3>
                   <p className="text-gray-600">Senior Sales Agent</p>
                 </div>
                 <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={female}
                     alt="Team Member 3"
                     className="w-32 h-32 rounded-full mx-auto mb-4 transition duration-300 ease-in-out transform hover:scale-110"
                   />
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
-                    Michael Johnson
+                    Daniel Roberts
                   </h3>
                   <p className="text-gray-600">Marketing Director</p>
                 </div>
@@ -272,7 +280,7 @@ export default function About() {
                   </p>
                   <div className="flex items-center">
                     <img
-                      src="https://via.placeholder.com/50"
+                      src={female2}
                       alt="Client 1"
                       className="w-12 h-12 rounded-full mr-4"
                     />
@@ -292,7 +300,7 @@ export default function About() {
                   </p>
                   <div className="flex items-center">
                     <img
-                      src="https://via.placeholder.com/50"
+                      src={male3}
                       alt="Client 2"
                       className="w-12 h-12 rounded-full mr-4"
                     />

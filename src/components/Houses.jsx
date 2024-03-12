@@ -10,7 +10,7 @@ export default function Houses() {
 
   return (
     <>
-      <div className="relative min-h-screen bg-gray-100">
+      <div className="relative min-h-screen bg-gray-100 mt-10">
         {/* Filter Menu */}
         <div
           className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${

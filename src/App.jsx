@@ -6,15 +6,15 @@ import About from "./components/About";
 import Houses from "./components/Houses";
 import Footer from "./components/Footer";
 import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-
 
 function App() {
   return (
     <>
       <Routes>
-      <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route
           path="/"
           element={
@@ -23,6 +23,7 @@ function App() {
             </>
           }
         />
+        <Route path="/signin" element={<SignIn />} />
         <Route
           path="/houses"
           element={
@@ -58,7 +59,7 @@ function App() {
           element={
             <>
               <Header />
-              <About/>
+              <About />
               <Footer />
             </>
           }

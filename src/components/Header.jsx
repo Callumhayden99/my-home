@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,27 +28,30 @@ export default function Header() {
             </svg>
           </button>
         </div>
-
         {/* Conditional rendering and centering for burger menu content on small screens */}
         {isOpen && (
           <div className="flex flex-col items-center md:hidden mt-5">
             <nav className="flex flex-col items-center gap-5">
-              <Link to="/">
+              <Link to="/" className="hover:text-blue-500">
                 <h2>HOME</h2>
               </Link>
-              <Link to="/houses">
+              <Link to="/houses" className="hover:text-blue-500">
                 <h2>HOUSES</h2>
               </Link>
-              <Link to="/services">
+              <Link to="/services" className="hover:text-blue-500">
                 <h2>SERVICE</h2>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact" className="hover:text-blue-500">
                 <h2>CONTACT</h2>
               </Link>
-              <Link to="/about">
+              <Link to="/about" className="hover:text-blue-500">
                 <h2>ABOUT US</h2>
               </Link>
-              <button className="text-blue-500">Sign In</button>
+              <Link to="/signin">
+                <button className="text-blue-500 hover:text-blue-600">
+                  Sign In
+                </button>
+              </Link>
               <Link to="/signup">
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                   Sign Up
@@ -56,27 +60,30 @@ export default function Header() {
             </nav>
           </div>
         )}
-
         {/* Navigation links and buttons for larger screens, remain unaffected */}
         <div className="hidden md:flex md:flex-row md:items-center md:justify-center mt-5 md:mt-0">
           <nav className="flex flex-row justify-between items-center gap-7">
-            <Link to="/">
+            <Link to="/" className="hover:text-blue-500">
               <h2>HOME</h2>
             </Link>
-            <Link to="/houses">
+            <Link to="/houses" className="hover:text-blue-500">
               <h2>HOUSES</h2>
             </Link>
-            <Link to="/services">
+            <Link to="/services" className="hover:text-blue-500">
               <h2>SERVICE</h2>
             </Link>
-            <Link to="/contact">
+            <Link to="/contact" className="hover:text-blue-500">
               <h2>CONTACT</h2>
             </Link>
-            <Link to="/about">
+            <Link to="/about" className="hover:text-blue-500">
               <h2>ABOUT US</h2>
             </Link>
             <div className="flex ml-20 gap-5">
-              <button className="text-blue-500">Sign In</button>
+              <Link to="/signin">
+                <button className="text-blue-500 hover:text-blue-600">
+                  Sign In
+                </button>
+              </Link>
               <Link to="/signup">
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                   Sign Up
@@ -91,7 +98,8 @@ export default function Header() {
           <Route path="/service" />
           <Route path="/contact" />
           <Route path="/about" />
-          <Route path="/signup"/>
+          <Route path="/signup" />
+          <Route path="/signin" />
         </Routes>
       </div>
     </>
