@@ -3,8 +3,9 @@ import Header from "./components/Header";
 import Service from "./components/Service";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Houses from "./components/Houses";
+import Filter from "./components/Filter";
 import Footer from "./components/Footer";
+import HouseDetails from "./components/HouseDetails";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import { Route, Routes } from "react-router-dom";
@@ -29,11 +30,12 @@ function App() {
           element={
             <>
               <Header />
-              <Houses />
+              <Filter />
               <Footer />
             </>
           }
         />
+         <Route path="/homes/:id" element={<HouseDetails />} />
         <Route
           path="/services"
           element={

@@ -1,0 +1,15 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "plugins": ["node"],
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "node/no-missing-require": "off"
+  }
+}

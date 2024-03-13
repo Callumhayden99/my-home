@@ -6,102 +6,137 @@ export default function Header() {
 
   return (
     <>
-      <div className="px-5 mt-5">
-        {/* Header section with logo and burger menu button */}
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">SKY ESTATE</h1>
-          {/* Burger menu button */}
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+      <header className="bg-white shadow-md">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex justify-between items-center">
+            <Link to="/" className="text-2xl font-bold text-gray-800">
+              SKY ESTATE
+            </Link>
+            {/* Burger menu button */}
+            <button
+              className="md:hidden focus:outline-none"
+              onClick={() => setIsOpen(!isOpen)}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        {/* Conditional rendering and centering for burger menu content on small screens */}
-        {isOpen && (
-          <div className="flex flex-col items-center md:hidden mt-5">
-            <nav className="flex flex-col items-center gap-5">
-              <Link to="/" className="hover:text-blue-500">
-                <h2>HOME</h2>
+              <svg
+                className="w-6 h-6 text-gray-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+            {/* Navigation links for larger screens */}
+            <nav className="hidden md:flex md:items-center md:space-x-8">
+              <Link
+                to="/"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                HOME
               </Link>
-              <Link to="/houses" className="hover:text-blue-500">
-                <h2>HOUSES</h2>
+              <Link
+                to="/houses"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                HOUSES
               </Link>
-              <Link to="/services" className="hover:text-blue-500">
-                <h2>SERVICE</h2>
+              <Link
+                to="/services"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                SERVICE
               </Link>
-              <Link to="/contact" className="hover:text-blue-500">
-                <h2>CONTACT</h2>
+              <Link
+                to="/contact"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                CONTACT
               </Link>
-              <Link to="/about" className="hover:text-blue-500">
-                <h2>ABOUT US</h2>
+              <Link
+                to="/about"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                ABOUT US
               </Link>
+            </nav>
+            {/* Sign In and Sign Up buttons for larger screens */}
+            <div className="hidden md:flex md:items-center md:space-x-4">
               <Link to="/signin">
-                <button className="text-blue-500 hover:text-blue-600">
+                <button className="text-blue-500 hover:text-blue-600 transition duration-300">
                   Sign In
                 </button>
               </Link>
               <Link to="/signup">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="md:hidden">
+            <nav className="flex flex-col items-center space-y-4 py-4">
+              <Link
+                to="/"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                HOME
+              </Link>
+              <Link
+                to="/houses"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                HOUSES
+              </Link>
+              <Link
+                to="/services"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                SERVICE
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                CONTACT
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-800 hover:text-blue-500 transition duration-300"
+              >
+                ABOUT US
+              </Link>
+              <Link to="/signin">
+                <button className="text-blue-500 hover:text-blue-600 transition duration-300">
+                  Sign In
+                </button>
+              </Link>
+              <Link to="/signup">
+                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300">
                   Sign Up
                 </button>
               </Link>
             </nav>
           </div>
         )}
-        {/* Navigation links and buttons for larger screens, remain unaffected */}
-        <div className="hidden md:flex md:flex-row md:items-center md:justify-center mt-5 md:mt-0">
-          <nav className="flex flex-row justify-between items-center gap-7">
-            <Link to="/" className="hover:text-blue-500">
-              <h2>HOME</h2>
-            </Link>
-            <Link to="/houses" className="hover:text-blue-500">
-              <h2>HOUSES</h2>
-            </Link>
-            <Link to="/services" className="hover:text-blue-500">
-              <h2>SERVICE</h2>
-            </Link>
-            <Link to="/contact" className="hover:text-blue-500">
-              <h2>CONTACT</h2>
-            </Link>
-            <Link to="/about" className="hover:text-blue-500">
-              <h2>ABOUT US</h2>
-            </Link>
-            <div className="flex ml-20 gap-5">
-              <Link to="/signin">
-                <button className="text-blue-500 hover:text-blue-600">
-                  Sign In
-                </button>
-              </Link>
-              <Link to="/signup">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                  Sign Up
-                </button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-        <Routes>
-          <Route path="/" />
-          <Route path="/houses" />
-          <Route path="/service" />
-          <Route path="/contact" />
-          <Route path="/about" />
-          <Route path="/signup" />
-          <Route path="/signin" />
-        </Routes>
-      </div>
+      </header>
+      <Routes>
+        <Route path="/" />
+        <Route path="/houses" />
+        <Route path="/service" />
+        <Route path="/contact" />
+        <Route path="/about" />
+        <Route path="/signup" />
+        <Route path="/signin" />
+      </Routes>
     </>
   );
 }

@@ -7,7 +7,7 @@ import male3 from "../assets/male3.jpg";
 export default function About() {
   return (
     <>
-      <div className="min-h-screen bg-white mt-10">
+      <div className="min-h-screen bg-white">
         {/* Header */}{" "}
         <header className="bg-gray-100 shadow">
           {" "}
