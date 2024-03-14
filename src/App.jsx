@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route
-          path="/"
+          path="*"
           element={
             <>
               <Home />

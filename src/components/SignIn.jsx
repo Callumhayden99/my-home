@@ -1,6 +1,7 @@
-
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -14,16 +15,25 @@ export default function SignIn() {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData); // Log form data to the console
-    // Perform sign-in authentication and redirect to appropriate page
-    navigate("/"); // Example: Redirect to home page after successful sign-in
+    console.log(formData);
+
+    try {
+      const response = await axios.post("http://localhost:3000/api/auth/signin", formData);
+
+      if (response.status === 200) {
+        navigate("/");
+      } else {
+        console.log("Sign-in failed");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleBackClick = () => {
-    navigate(-1); // Go back to the previous page
+    navigate(-1);
   };
 
   return (
