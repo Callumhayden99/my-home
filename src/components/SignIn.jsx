@@ -20,7 +20,7 @@ export default function SignIn() {
     console.log(formData);
   
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/signin", formData);
+      const response = await axios.post("https://my-home-server-production.up.railway.app/api/auth/signin", formData);
   
       if (response.status === 200) {
         // Store the authentication token in local storage
