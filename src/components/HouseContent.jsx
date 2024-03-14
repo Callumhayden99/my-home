@@ -20,7 +20,7 @@ const HouseContent = ({ filters }) => {
   useEffect(() => {
     const fetchLuxuryHomes = async () => {
       try {
-        const response = await axios.get("http://my-home-server-production.up.railway.app/api/luxuryhomes");
+        const response = await axios.get("https://my-home-server-production.up.railway.app/api/luxuryhomes");
         console.log("Response data:", response.data);
         if (Array.isArray(response.data)) {
           setLuxuryHomes(response.data);

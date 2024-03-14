@@ -23,7 +23,7 @@ export default function HouseDetails() {
     const fetchLuxuryHome = async () => {
       try {
         const response = await axios.get(
-          `http://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`
+          `https://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`
         );
         console.log("Response data:", response.data);
         setLuxuryHome(response.data);
