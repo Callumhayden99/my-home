@@ -6,8 +6,9 @@ import About from "./components/About";
 import Filter from "./components/Filter";
 import Footer from "./components/Footer";
 import HouseDetails from "./components/HouseDetails";
-import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
+import CreateHome from "./components/CreateHome";
+import EditHome from "./components/EditHome";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -15,7 +16,6 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/signup" element={<SignUp />} />
         <Route
           path="*"
           element={
@@ -66,6 +66,8 @@ function App() {
             </>
           }
         />
+        <Route path="/admin/create-home" element={<CreateHome />} />
+<Route path="/admin/edit-home/:id" element={<EditHome />} />
       </Routes>
     </>
   );

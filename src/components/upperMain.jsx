@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import home from "../assets/home.jpg";
 
 export default function UpperMain() {
@@ -13,15 +14,24 @@ export default function UpperMain() {
               Find properties that perfectly match your preferences and needs. Let us assist you in your search for your dream home.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
-              <button className="bg-gray-800 text-white py-3 px-8 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out text-lg">
+              <Link
+                to="/houses"
+                className="bg-gray-800 text-white py-3 px-8 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out text-lg"
+              >
                 Buy
-              </button>
-              <button className="bg-gray-800 text-white py-3 px-8 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out text-lg">
+              </Link>
+              <Link
+                to="/houses"
+                className="bg-gray-800 text-white py-3 px-8 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out text-lg"
+              >
                 Rent
-              </button>
-              <button className="bg-gray-800 text-white py-3 px-8 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out text-lg">
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-gray-800 text-white py-3 px-8 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out text-lg"
+              >
                 Sell
-              </button>
+              </Link>
             </div>
           </div>
           <div className="lg:w-1/2">

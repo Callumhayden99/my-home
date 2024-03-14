@@ -4,31 +4,30 @@ import female2 from "../assets/female2.jpg";
 import male from "../assets/male.jpg";
 import male2 from "../assets/male2.jpg";
 import male3 from "../assets/male3.jpg";
+
 export default function About() {
   return (
     <>
       <div className="min-h-screen bg-white">
-        {/* Header */}{" "}
-        <header className="bg-gray-100 shadow">
-          {" "}
+        {/* Header */}
+        <header className="bg-black">
           <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            {" "}
-            <h1 className="text-3xl text-center font-bold leading-tight text-gray-800">
+            <h1 className="text-3xl text-center font-bold leading-tight text-white">
               About Us
-            </h1>{" "}
-          </div>{" "}
+            </h1>
+          </div>
         </header>
         <main>
           <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             {/* Company Overview */}
             <section className="mb-12">
-              <h2 className="text-4xl font-bold  text-gray-800">
+              <h2 className="text-4xl font-bold text-gray-800 mb-6">
                 Our Story
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
                 <div>
-                  <p className="text-gray-600 text-lg lg:text-2xl leading-relaxed mb-10 ">
-                    Founded in Manchester, England, our luxury homes company has
+                  <p className="text-gray-600 text-lg lg:text-2xl leading-relaxed mb-10">
+                    Founded in Boston, USA,  our luxury homes company has
                     been helping clients buy, sell, and rent high-end properties
                     for many years. With a passion for exceptional service and a
                     deep understanding of the luxury real estate market, we have
@@ -66,7 +65,7 @@ export default function About() {
                 Why We're the Best
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="flex items-center justify-center mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +92,7 @@ export default function About() {
                     informed guidance and advice.
                   </p>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="flex items-center justify-center mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +119,7 @@ export default function About() {
                     stress-free experience.
                   </p>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="flex items-center justify-center mb-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +156,7 @@ export default function About() {
                 Our Services
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
                     Selling
                   </h3>
@@ -168,7 +167,7 @@ export default function About() {
                     negotiating the best possible deal.
                   </p>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
                     Buying
                   </h3>
@@ -180,7 +179,7 @@ export default function About() {
                     finest homes available.
                   </p>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
                   <h3 className="text-xl font-bold mb-2 text-gray-800">
                     Renting
                   </h3>
@@ -200,7 +199,7 @@ export default function About() {
                 Our Team
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <img
                     src={male}
                     alt="Team Member 1"
@@ -211,7 +210,7 @@ export default function About() {
                   </h3>
                   <p className="text-gray-600">Founder & CEO</p>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <img
                     src={male2}
                     alt="Team Member 2"
@@ -222,7 +221,7 @@ export default function About() {
                   </h3>
                   <p className="text-gray-600">Senior Sales Agent</p>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6 text-center">
+                <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <img
                     src={female}
                     alt="Team Member 3"
@@ -271,7 +270,7 @@ export default function About() {
                 What Our Clients Say
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
                   <p className="text-gray-600 mb-4">
                     "Working with this luxury homes company was an incredible
                     experience. Their attention to detail and personalized
@@ -290,7 +289,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
                   <p className="text-gray-600 mb-4">
                     "As a first-time buyer, I was apprehensive about navigating
                     the luxury real estate market. However, the team at this

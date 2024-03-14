@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function SignIn() {
@@ -18,19 +18,26 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-
+  
     try {
       const response = await axios.post("http://localhost:3000/api/auth/signin", formData);
-
+  
       if (response.status === 200) {
+        // Store the authentication token in local storage
+        localStorage.setItem('token', response.data.token);
         navigate("/");
       } else {
         console.log("Sign-in failed");
       }
     } catch (error) {
-      console.error(error);
+      if (error.response && error.response.status === 401) {
+        console.error("Invalid credentials");
+      } else {
+        console.error(error);
+      }
     }
   };
+  
 
   const handleBackClick = () => {
     navigate(-1);
@@ -39,7 +46,7 @@ export default function SignIn() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-6">Sign In</h2>
+        <h2 className="text-2xl font-semibold mb-6">Admin Sign In</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
@@ -82,14 +89,6 @@ export default function SignIn() {
             Sign In
           </button>
         </form>
-        <div className="mt-4 text-center">
-          <p className="text-gray-600">
-            Don't have an account?{" "}
-            <Link to="/signup" className="text-blue-500 hover:underline">
-              Sign Up
-            </Link>
-          </p>
-        </div>
         <button
           onClick={handleBackClick}
           className="mt-4 inline-block bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"

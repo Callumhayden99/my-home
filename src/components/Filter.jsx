@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import HouseContent from './HouseContent';
+import { FaFilter } from 'react-icons/fa';
 
 export default function Filter() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -29,9 +30,10 @@ export default function Filter() {
     <div className="relative min-h-screen bg-gray-100">
       <div className="flex justify-end px-4 py-4">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-blue-500 text-white px-4 py-2 rounded flex items-center"
           onClick={toggleFilter}
         >
+          <FaFilter className="mr-2" />
           Filter
         </button>
       </div>

@@ -19,12 +19,12 @@ export default function Service() {
               "url('https://source.unsplash.com/1600x900/?luxury-villa')",
           }}
         >
-          <div className="bg-black bg-opacity-50 py-20">
+          <div className="bg-black bg-opacity-60 py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h1 className="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+              <h1 className="text-5xl font-extrabold text-white sm:text-6xl sm:tracking-tight lg:text-7xl">
                 Luxury Home Buying & Renting
               </h1>
-              <p className="mt-6 max-w-3xl text-xl text-gray-200">
+              <p className="mt-6 max-w-3xl text-2xl text-gray-300">
                 Experience the finest in luxury living with our curated
                 selection of high-end properties. Whether you're looking to buy,
                 rent, or sell, we've got you covered.
@@ -38,10 +38,10 @@ export default function Service() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:flex lg:items-center lg:justify-between">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
                   Luxury Home Buying
                 </h2>
-                <p className="mt-3 max-w-3xl text-lg text-gray-500">
+                <p className="mt-3 max-w-3xl text-xl text-gray-700">
                   Discover your dream home with our exclusive collection of
                   luxury properties. Our team of experts will guide you through
                   every step of the buying process, ensuring a seamless and
@@ -50,7 +50,7 @@ export default function Service() {
                 <div className="mt-10 sm:flex">
                   <a
                     href="#"
-                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                   >
                     Browse Homes
                   </a>
@@ -58,7 +58,7 @@ export default function Service() {
               </div>
               <div className="mt-10 lg:mt-0 lg:ml-10">
                 <img
-                  className="mx-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+                  className="mx-auto rounded-lg shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
                   src="https://source.unsplash.com/800x600/?luxury-home"
                   alt="Luxury Home"
                 />
@@ -68,14 +68,14 @@ export default function Service() {
         </div>
 
         {/* Renting Section */}
-        <div className="bg-gray-800 py-20">
+        <div className="bg-black py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:flex lg:items-center lg:justify-between">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
                   Luxury Home Renting
                 </h2>
-                <p className="mt-3 max-w-3xl text-lg text-gray-200">
+                <p className="mt-3 max-w-3xl text-xl text-gray-300">
                   Indulge in the ultimate luxury living experience with our
                   curated selection of high-end rental properties. Enjoy the
                   finest amenities and personalized service tailored to your
@@ -84,7 +84,7 @@ export default function Service() {
                 <div className="mt-10 sm:flex">
                   <a
                     href="#"
-                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                   >
                     View Rentals
                   </a>
@@ -92,7 +92,7 @@ export default function Service() {
               </div>
               <div className="mt-10 lg:mt-0 lg:ml-10">
                 <img
-                  className="mx-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+                  className="mx-auto rounded-lg shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
                   src="https://source.unsplash.com/800x600/?luxury-apartment"
                   alt="Luxury Apartment"
                 />
@@ -106,10 +106,10 @@ export default function Service() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:flex lg:items-center lg:justify-between">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
                   Luxury Home Selling
                 </h2>
-                <p className="mt-3 max-w-3xl text-lg text-gray-500">
+                <p className="mt-3 max-w-3xl text-xl text-gray-700">
                   Trust our experienced team to showcase your luxury property to
                   the right buyers. Our cutting-edge marketing strategies and
                   extensive network will ensure your home receives the attention
@@ -118,7 +118,7 @@ export default function Service() {
                 <div className="mt-10 sm:flex">
                   <a
                     href="#"
-                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                   >
                     List Your Home
                   </a>
@@ -126,7 +126,7 @@ export default function Service() {
               </div>
               <div className="mt-10 lg:mt-0 lg:ml-10">
                 <img
-                  className="mx-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+                  className="mx-auto rounded-lg shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
                   src="https://source.unsplash.com/800x600/?luxury-real-estate"
                   alt="Luxury Real Estate"
                 />
@@ -136,14 +136,14 @@ export default function Service() {
         </div>
 
         {/* Testimonials Section */}
-        <div className="py-20">
+        <div className="bg-black py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-4xl font-extrabold text-white sm:text-5xl mb-10">
               What Our Clients Say
             </h2>
             <div className="mt-10 space-y-10">
               <blockquote>
-                <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+                <div className="max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-gray-300">
                   <p>
                     &ldquo;The team at Luxury Homes went above and beyond to
                     find us the perfect property. Their attention to detail and
@@ -155,13 +155,13 @@ export default function Service() {
                   <div className="md:flex md:items-center md:justify-center">
                     <div className="md:flex-shrink-0">
                       <img
-                        className="mx-auto h-10 w-10 rounded-full"
+                        className="mx-auto h-12 w-12 rounded-full"
                         src="https://source.unsplash.com/100x100/?profile"
                         alt=""
                       />
                     </div>
                     <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                      <div className="text-base font-medium text-gray-900">
+                      <div className="text-base font-medium text-gray-300">
                         John Doe
                       </div>
                     </div>
@@ -170,7 +170,7 @@ export default function Service() {
               </blockquote>
 
               <blockquote>
-                <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+                <div className="max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-gray-300">
                   <p>
                     &ldquo;Luxury Homes made finding our dream rental property a
                     seamless and enjoyable experience. Their expertise and
@@ -181,13 +181,13 @@ export default function Service() {
                   <div className="md:flex md:items-center md:justify-center">
                     <div className="md:flex-shrink-0">
                       <img
-                        className="mx-auto h-10 w-10 rounded-full"
+                        className="mx-auto h-12 w-12 rounded-full"
                         src="https://source.unsplash.com/100x100/?profile-2"
                         alt=""
                       />
                     </div>
                     <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                      <div className="text-base font-medium text-gray-900">
+                      <div className="text-base font-medium text-gray-300">
                         Jane Smith
                       </div>
                     </div>
@@ -196,7 +196,7 @@ export default function Service() {
               </blockquote>
 
               <blockquote>
-                <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+                <div className="max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-gray-300">
                   <p>
                     &ldquo;Selling our luxury home with Luxury Homes was a
                     seamless and profitable experience. Their marketing
@@ -208,13 +208,13 @@ export default function Service() {
                   <div className="md:flex md:items-center md:justify-center">
                     <div className="md:flex-shrink-0">
                       <img
-                        className="mx-auto h-10 w-10 rounded-full"
+                        className="mx-auto h-12 w-12 rounded-full"
                         src="https://source.unsplash.com/100x100/?profile-3"
                         alt=""
                       />
                     </div>
                     <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                      <div className="text-base font-medium text-gray-900">
+                      <div className="text-base font-medium text-gray-300">
                         Michael Johnson
                       </div>
                     </div>
@@ -224,18 +224,19 @@ export default function Service() {
             </div>
           </div>
         </div>
+
         {/* Process Section */}
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl text-center mb-10">
+            <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl text-center mb-10">
               Our Process
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105">
-                <div className="w-20 h-20 rounded-full bg-gray-800 text-white flex items-center justify-center mx-auto mb-4 transition duration-500 ease-in-out transform hover:rotate-12">
+                <div className="w-24 h-24 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-4 transition duration-500 ease-in-out transform hover:rotate-12">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
+                    className="h-12 w-12"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -248,19 +249,19 @@ export default function Service() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Consultation
                 </h3>
-                <p className="text-gray-500">
+                <p className="text-xl text-gray-700">
                   We start by understanding your needs and preferences through a
                   personal consultation.
                 </p>
               </div>
               <div className="text-center transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105">
-                <div className="w-20 h-20 rounded-full bg-gray-800 text-white flex items-center justify-center mx-auto mb-4 transition duration-500 ease-in-out transform hover:rotate-12">
+                <div className="w-24 h-24 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-4 transition duration-500 ease-in-out transform hover:rotate-12">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
+                    className="h-12 w-12"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -273,19 +274,19 @@ export default function Service() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Property Search
                 </h3>
-                <p className="text-gray-500">
+                <p className="text-xl text-gray-700">
                   Our experts curate a selection of properties that match your
                   criteria.
                 </p>
               </div>
               <div className="text-center transition duration-500 ease-in-out transform hover:-translate-y-2 hover:scale-105">
-                <div className="w-20 h-20 rounded-full bg-gray-800 text-white flex items-center justify-center mx-auto mb-4 transition duration-500 ease-in-out transform hover:rotate-12">
+                <div className="w-24 h-24 rounded-full bg-black text-white flex items-center justify-center mx-auto mb-4 transition duration-500 ease-in-out transform hover:rotate-12">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
+                    className="h-12 w-12"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -298,10 +299,10 @@ export default function Service() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Seamless Transactions
                 </h3>
-                <p className="text-gray-500">
+                <p className="text-xl text-gray-700">
                   We handle all the details, ensuring a smooth and secure
                   transaction process.
                 </p>
@@ -309,15 +310,16 @@ export default function Service() {
             </div>
           </div>
         </div>
+
         {/* Valuation Section */}
-        <div className="bg-gray-800 py-20">
+        <div className="bg-black py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="lg:flex lg:items-center lg:justify-between">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
                   Luxury Home Valuations
                 </h2>
-                <p className="mt-3 max-w-3xl text-lg text-gray-200">
+                <p className="mt-3 max-w-3xl text-xl text-gray-300">
                   Accurate valuation is key when buying or selling a luxury
                   property. Our experienced appraisers use advanced techniques
                   and market insights to provide precise valuations, ensuring
@@ -326,7 +328,7 @@ export default function Service() {
                 <div className="mt-10 sm:flex">
                   <button
                     onClick={toggleModal}
-                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                    className="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                   >
                     Get a Valuation
                   </button>
@@ -334,7 +336,7 @@ export default function Service() {
               </div>
               <div className="mt-10 lg:mt-0 lg:ml-10">
                 <img
-                  className="mx-auto rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+                  className="mx-auto rounded-lg shadow-2xl transition duration-300 ease-in-out transform hover:scale-105"
                   src="https://source.unsplash.com/800x600/?luxury-home-valuation"
                   alt="Luxury Home Valuation"
                 />

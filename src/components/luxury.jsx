@@ -117,9 +117,6 @@ export default function Luxury() {
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-800 mb-2">{home.title}</h4>
                   <p className="text-gray-600">{home.description}</p>
-                  <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out">
-                    View Details
-                  </button>
                 </div>
               </div>
             ))}
