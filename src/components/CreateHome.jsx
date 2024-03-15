@@ -33,7 +33,7 @@ export default function CreateHome() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/luxuryhomes", formData, {
+      await axios.post("https://my-home-server-production.up.railway.app/api/luxuryhomes", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
