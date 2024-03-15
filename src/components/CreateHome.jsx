@@ -10,7 +10,7 @@ export default function CreateHome() {
     address: "",
     city: "",
     country: "",
-    homeType: "APARTMENT",
+    homeType: "",
     bedrooms: "",
     bathrooms: "",
     hasGarden: false,
@@ -33,7 +33,11 @@ export default function CreateHome() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://my-home-server-production.up.railway.app/api/luxuryhomes", formData, {
+      const requestData = {
+        ...formData,
+        price: parseFloat(formData.price),
+      };
+      await axios.post("https://my-home-server-production.up.railway.app/api/luxuryhomes", requestData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
