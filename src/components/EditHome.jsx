@@ -58,211 +58,225 @@ export default function EditHome() {
   };
 
   return (
-    <div className="container mx-auto">
-      <h2 className="text-2xl font-semibold mb-4">Edit Home</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="title" className="block font-semibold">
-            Title
-          </label>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
+    <div className="container mx-auto px-4 py-12">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+        <h2 className="text-4xl font-bold mb-8 text-center text-blue-600">Edit Home</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="title" className="block text-xl font-semibold mb-2 text-gray-800">
+                Title
+              </label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+                className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
 
-        <div className="mb-4">
-          <label htmlFor="description" className="block font-semibold">
-            Description
-          </label>
-          <textarea
-            id="description"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
+            <div>
+              <label htmlFor="price" className="block text-xl font-semibold mb-2 text-gray-800">
+                Price
+              </label>
+              <input
+                type="text"
+                id="price"
+                name="price"
+                value={formData.price}
+                onChange={handleChange}
+                className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="price" className="block font-semibold">
-            Price
-          </label>
-          <input
-            type="text"
-            id="price"
-            name="price"
-            value={formData.price}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
+          <div className="mb-6">
+            <label htmlFor="description" className="block text-xl font-semibold mb-2 text-gray-800">
+              Description
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              rows="4"
+            ></textarea>
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="address" className="block font-semibold">
-            Address
-          </label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="address" className="block text-xl font-semibold mb-2 text-gray-800">
+                Address
+              </label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
 
-        <div className="mb-4">
-          <label htmlFor="city" className="block font-semibold">
-            City
-          </label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
+            <div>
+              <label htmlFor="city" className="block text-xl font-semibold mb-2 text-gray-800">
+                City
+              </label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="country" className="block font-semibold">
-            Country
-          </label>
-          <input
-            type="text"
-            id="country"
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
+          <div className="mb-6">
+            <label htmlFor="country" className="block text-xl font-semibold mb-2 text-gray-800">
+              Country
+            </label>
+            <input
+              type="text"
+              id="country"
+              name="country"
+              value={formData.country}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="homeType" className="block font-semibold">
-            Home Type
-          </label>
-          <select
-            id="homeType"
-            name="homeType"
-            value={formData.homeType}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
+          <div className="mb-6">
+            <label htmlFor="homeType" className="block text-xl font-semibold mb-2 text-gray-800">
+              Home Type
+            </label>
+            <select
+              id="homeType"
+              name="homeType"
+              value={formData.homeType}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+            >
+              <option value="APARTMENT">Apartment</option>
+              <option value="HOUSE">House</option>
+              <option value="VILLA">Villa</option>
+            </select>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="bedrooms" className="block text-xl font-semibold mb-2 text-gray-800">
+                Bedrooms
+              </label>
+              <input
+                type="number"
+                id="bedrooms"
+                name="bedrooms"
+                value={formData.bedrooms}
+                onChange={handleChange}
+                className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="bathrooms" className="block text-xl font-semibold mb-2 text-gray-800">
+                Bathrooms
+              </label>
+              <input
+                type="number"
+                id="bathrooms"
+                name="bathrooms"
+                value={formData.bathrooms}
+                onChange={handleChange}
+                className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="hasGarden"
+                name="hasGarden"
+                checked={formData.hasGarden}
+                onChange={handleCheckboxChange}
+                className="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label htmlFor="hasGarden" className="ml-2 text-xl font-semibold text-gray-800">
+                Has Garden
+              </label>
+            </div>
+
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="hasGarage"
+                name="hasGarage"
+                checked={formData.hasGarage}
+                onChange={handleCheckboxChange}
+                className="h-5 w-5 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label htmlFor="hasGarage" className="ml-2 text-xl font-semibold text-gray-800">
+                Has Garage
+              </label>
+            </div>
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="sqftArea" className="block text-xl font-semibold mb-2 text-gray-800">
+              Square Footage
+            </label>
+            <input
+              type="number"
+              id="sqftArea"
+              name="sqftArea"
+              value={formData.sqftArea}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="yearBuilt" className="block text-xl font-semibold mb-2 text-gray-800">
+              Year Built
+            </label>
+            <input
+              type="number"
+              id="yearBuilt"
+              name="yearBuilt"
+              value={formData.yearBuilt}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <div className="mb-6">
+            <label htmlFor="imageUrl" className="block text-xl font-semibold mb-2 text-gray-800">
+              Image URL
+            </label>
+            <input
+              type="text"
+              id="imageUrl"
+              name="imageUrl"
+              value={formData.imageUrl}
+              onChange={handleChange}
+              className="w-full border-2 border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white text-xl font-bold py-3 rounded-lg hover:bg-blue-700 transition duration-300"
           >
-            <option value="APARTMENT">Apartment</option>
-            <option value="HOUSE">House</option>
-            <option value="VILLA">Villa</option>
-          </select>
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="bedrooms" className="block font-semibold">
-            Bedrooms
-          </label>
-          <input
-            type="number"
-            id="bedrooms"
-            name="bedrooms"
-            value={formData.bedrooms}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="bathrooms" className="block font-semibold">
-            Bathrooms
-          </label>
-          <input
-            type="number"
-            id="bathrooms"
-            name="bathrooms"
-            value={formData.bathrooms}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="hasGarden" className="block font-semibold">
-            Has Garden
-          </label>
-          <input
-            type="checkbox"
-            id="hasGarden"
-            name="hasGarden"
-            checked={formData.hasGarden}
-            onChange={handleCheckboxChange}
-            className="border border-gray-300 rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="hasGarage" className="block font-semibold">
-            Has Garage
-          </label>
-          <input
-            type="checkbox"
-            id="hasGarage"
-            name="hasGarage"
-            checked={formData.hasGarage}
-            onChange={handleCheckboxChange}
-            className="border border-gray-300 rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="sqftArea" className="block font-semibold">
-            Square Footage
-          </label>
-          <input
-            type="number"
-            id="sqftArea"
-            name="sqftArea"
-            value={formData.sqftArea}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="yearBuilt" className="block font-semibold">
-            Year Built
-          </label>
-          <input
-            type="number"
-            id="yearBuilt"
-            name="yearBuilt"
-            value={formData.yearBuilt}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="imageUrl" className="block font-semibold">
-            Image URL
-          </label>
-          <input
-            type="text"
-            id="imageUrl"
-            name="imageUrl"
-            value={formData.imageUrl}
-            onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 rounded"
-          />
-        </div>
-
-        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-          Update
-        </button>
-      </form>
+            Update
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

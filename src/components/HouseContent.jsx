@@ -98,7 +98,7 @@ const HouseContent = ({ filters }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/luxuryhomes/${id}`, {
+      await axios.delete(`https://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
