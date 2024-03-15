@@ -26,7 +26,7 @@ export default function EditHome() {
   useEffect(() => {
     const fetchLuxuryHome = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/luxuryhomes/${id}`);
+        const response = await axios.get(`https://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`);
         setFormData(response.data);
       } catch (error) {
         console.error("Error fetching luxury home:", error);
@@ -46,7 +46,7 @@ export default function EditHome() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/luxuryhomes/${id}`, formData, {
+      await axios.put(`https://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
