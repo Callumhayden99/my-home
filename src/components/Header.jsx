@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white shadow-md">
+      <header className="bg-white drop-shadow-md">
         <div className="container mx-auto px-4 py-6">
           <div className="flex justify-between items-center">
             <Link to="/" className="text-2xl font-bold text-gray-800 flex items-center">
@@ -32,13 +32,13 @@ export default function Header() {
             </Link>
             {/* Burger menu button */}
             <button
-              className="md:hidden focus:outline-none"
+              className="lg:hidden focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
             >
               <FaBars className="w-6 h-6 text-gray-800" />
             </button>
             {/* Navigation links for larger screens */}
-            <nav className="hidden md:flex md:items-center md:space-x-8">
+            <nav className="hidden lg:flex lg:items-center lg:space-x-8">
               <Link
                 to="/"
                 className="text-gray-800 hover:text-blue-500 transition duration-300 flex items-center"
@@ -76,7 +76,7 @@ export default function Header() {
               </Link>
             </nav>
             {/* Sign In and Logout buttons for larger screens */}
-            <div className="hidden md:flex md:items-center md:space-x-4">
+            <div className="hidden lg:flex lg:items-center lg:space-x-4">
               {isSignedIn ? (
                 <button
                   onClick={handleLogout}
@@ -98,7 +98,7 @@ export default function Header() {
         </div>
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <nav className="flex flex-col items-center space-y-4 py-4">
               <Link
                 to="/"
