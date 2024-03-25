@@ -1,8 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function CreateHome() {
+const CreateHome = ({ onCreate }) => {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -33,15 +33,7 @@ export default function CreateHome() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const requestData = {
-        ...formData,
-        price: parseFloat(formData.price),
-      };
-      await axios.post("https://my-home-server-production.up.railway.app/api/luxuryhomes", requestData, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-        },
-      });
+      await onCreate(formData);
       navigate("/houses");
     } catch (error) {
       console.error("Error creating luxury home:", error);
@@ -50,19 +42,8 @@ export default function CreateHome() {
 
   return (
     <div className="container mx-auto py-8">
-       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">Create New Home</h2>
-        <Link
-          to="/houses"
-          className="text-blue-500 hover:text-blue-600 transition duration-300"
-        >
-          Back
-        </Link>
-      </div>
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 py-6"
-      >
+      <h2 className="text-3xl font-bold mb-6">Create New Home</h2>
+      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 py-6">
         <div className="mb-4">
           <label htmlFor="title" className="block text-gray-700 font-bold mb-2">
             Title
@@ -78,10 +59,7 @@ export default function CreateHome() {
         </div>
 
         <div className="mb-4">
-          <label
-            htmlFor="description"
-            className="block text-gray-700 font-bold mb-2"
-          >
+          <label htmlFor="description" className="block text-gray-700 font-bold mb-2">
             Description
           </label>
           <textarea
@@ -160,13 +138,13 @@ export default function CreateHome() {
             onChange={handleChange}
             className="w-full border-2 border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
+            <option value="">Select Home Type</option>
             <option value="APARTMENT">Apartment</option>
             <option value="HOUSE">House</option>
             <option value="VILLA">Villa</option>
             <option value="PENTHOUSE">Penthouse</option>
             <option value="BUNGALOW">Bungalow</option>
             <option value="MANSION">Mansion</option>
-
           </select>
         </div>
 
@@ -277,4 +255,10 @@ export default function CreateHome() {
       </form>
     </div>
   );
-}
+};
+
+CreateHome.propTypes = {
+  onCreate: PropTypes.func.isRequired,
+};
+
+export default CreateHome;

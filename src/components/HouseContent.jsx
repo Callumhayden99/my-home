@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const HouseContent = ({ filters }) => {
+const HouseContent = ({ filters, onCreate }) => {
   const [luxuryHomes, setLuxuryHomes] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
   const [filteredHomes, setFilteredHomes] = useState([]);
@@ -110,13 +110,35 @@ const HouseContent = ({ filters }) => {
     }
   };
 
+  const handleCreate = async (newHome) => {
+    try {
+      const response = await axios.post(
+        "https://my-home-server-production.up.railway.app/api/luxuryhomes",
+        newHome,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      setLuxuryHomes([...luxuryHomes, response.data]);
+      setFilteredHomes([...filteredHomes, response.data]);
+      onCreate();
+    } catch (error) {
+      console.error("Error creating luxury home:", error);
+    }
+  };
+
   return (
     <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-32 mb-10">
       {isAdmin && (
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Admin Actions</h2>
           <Link to="/admin/create-home">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded flex items-center">
+            <button
+              className="bg-blue-500 text-white px-4 py-2 rounded flex items-center"
+              onClick={() => handleCreate()}
+            >
               <FaPlusCircle className="mr-2" /> Add New Property
             </button>
           </Link>
@@ -195,6 +217,7 @@ HouseContent.propTypes = {
     garage: PropTypes.string,
     country: PropTypes.string,
   }).isRequired,
+  onCreate: PropTypes.func.isRequired,
 };
 
 export default HouseContent;
