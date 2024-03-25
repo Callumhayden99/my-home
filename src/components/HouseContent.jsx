@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const HouseContent = ({ filters, onCreate }) => {
+const HouseContent = ({ filters }) => {
   const [luxuryHomes, setLuxuryHomes] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
   const [filteredHomes, setFilteredHomes] = useState([]);
@@ -20,7 +20,9 @@ const HouseContent = ({ filters, onCreate }) => {
   useEffect(() => {
     const fetchLuxuryHomes = async () => {
       try {
-        const response = await axios.get("https://my-home-server-production.up.railway.app/api/luxuryhomes");
+        const response = await axios.get(
+          "https://my-home-server-production.up.railway.app/api/luxuryhomes"
+        );
         console.log("Response data:", response.data);
         if (Array.isArray(response.data)) {
           setLuxuryHomes(response.data);
@@ -55,8 +57,7 @@ const HouseContent = ({ filters, onCreate }) => {
         const [minPrice, maxPrice] = filters.price.split("-");
         filtered = filtered.filter(
           (home) =>
-            home.price >= parseInt(minPrice) &&
-            home.price < parseInt(maxPrice)
+            home.price >= parseInt(minPrice) && home.price < parseInt(maxPrice)
         );
       }
 
@@ -98,34 +99,18 @@ const HouseContent = ({ filters, onCreate }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-      setLuxuryHomes(luxuryHomes.filter((home) => home.id !== id));
-      setFilteredHomes(filteredHomes.filter((home) => home.id !== id));
-    } catch (error) {
-      console.error("Error deleting luxury home:", error);
-    }
-  };
-
-  const handleCreate = async (newHome) => {
-    try {
-      const response = await axios.post(
-        "https://my-home-server-production.up.railway.app/api/luxuryhomes",
-        newHome,
+      await axios.delete(
+        `https://my-home-server-production.up.railway.app/api/luxuryhomes/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
-      setLuxuryHomes([...luxuryHomes, response.data]);
-      setFilteredHomes([...filteredHomes, response.data]);
-      onCreate();
+      setLuxuryHomes(luxuryHomes.filter((home) => home.id !== id));
+      setFilteredHomes(filteredHomes.filter((home) => home.id !== id));
     } catch (error) {
-      console.error("Error creating luxury home:", error);
+      console.error("Error deleting luxury home:", error);
     }
   };
 
@@ -135,10 +120,7 @@ const HouseContent = ({ filters, onCreate }) => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Admin Actions</h2>
           <Link to="/admin/create-home">
-            <button
-              className="bg-blue-500 text-white px-4 py-2 rounded flex items-center"
-              onClick={() => handleCreate()}
-            >
+            <button className="bg-blue-500 text-white px-4 py-2 rounded flex items-center">
               <FaPlusCircle className="mr-2" /> Add New Property
             </button>
           </Link>
