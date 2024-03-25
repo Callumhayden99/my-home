@@ -163,6 +163,10 @@ export default function CreateHome() {
             <option value="APARTMENT">Apartment</option>
             <option value="HOUSE">House</option>
             <option value="VILLA">Villa</option>
+            <option value="PENTHOUSE">Penthouse</option>
+            <option value="BUNGALOW">Bungalow</option>
+            <option value="MANSION">Mansion</option>
+
           </select>
         </div>
 
